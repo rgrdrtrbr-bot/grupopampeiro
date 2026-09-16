@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Pampeiro - Santiago/RS | 1 Fábrica & 8 Lojas de Varejo</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rs: {
+                            red: '#B80C28',        /* Vermelho Farroupilha Principal */
+                            redDark: '#85071B',    /* Vermelho Nobre Escuro */
+                            redSoft: '#FDF2F4',
+                            yellow: '#F2B827',     /* Dourado Ouro RS */
+                            yellowDark: '#C9930E',
+                            green: '#0F5229',      /* Verde Farroupilha Accent */
+                        },
+                        pampeiro: {
+                            leather: '#4A2818',    /* Couro Nobre / Marrom Campeiro */
+                            leatherDark: '#2C160B',
+                            amber: '#8B4513',
+                            cream: '#FAF7F2',      /* Bege Tradicional Eleganter */
+                            creamDark: '#F0E8DC',
+                            dark: '#1A120E',       /* Madeira Queimada / Grafite */
+                            darkCard: '#241B16'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    },
+                    boxShadow: {
+                        'taste-sm': '0 2px 8px -2px rgba(26, 18, 14, 0.08), 0 1px 4px -1px rgba(26, 18, 14, 0.04)',
+                        'taste-md': '0 12px 24px -6px rgba(26, 18, 14, 0.12), 0 4px 12px -2px rgba(26, 18, 14, 0.06)',
+                        'taste-lg': '0 24px 48px -12px rgba(184, 12, 40, 0.25), 0 12px 24px -6px rgba(26, 18, 14, 0.15)',
+                        'glow-gold': '0 0 25px rgba(242, 184, 39, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .rs-tricolor-bar {
+            background: linear-gradient(90deg, #B80C28 0%, #B80C28 45%, #F2B827 45%, #F2B827 75%, #0F5229 75%, #0F5229 100%);
+            height: 5px;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 70% 30%, rgba(184, 12, 40, 0.88), rgba(26, 18, 14, 0.96)), url('pampeiro12.jpg') center/cover no-repeat;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(184, 12, 40, 0.07) 1.5px, transparent 1.5px);
+            background-size: 28px 28px;
+        }
+        .card-taste-hover {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-taste-hover:hover {
+            transform: translateY(-6px);
+        }
+    </style>
+</head>
+<body class="bg-pampeiro-cream text-slate-800 font-sans antialiased selection:bg-rs-red selection:text-white overflow-x-hidden">
+
+    <div class="rs-tricolor-bar w-full sticky top-0 z-50"></div>
+    
+    <!-- Top Utility Information Strip -->
+    <div class="bg-pampeiro-dark text-slate-300 text-xs py-2 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            
+            <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+                <span class="flex items-center gap-1.5 bg-black/40 px-2.5 py-1 rounded-full border border-rs-yellow/30 text-rs-yellow font-bold">
+                    <i class="fa-solid fa-star text-xs"></i>
+                    <span class="text-white font-semibold">4.8 / 5.0</span>
+                    <span class="text-slate-300 font-normal hidden md:inline">(+4.820 avaliações no Google)</span>
+                </span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span class="hidden md:flex items-center gap-1.5 text-slate-300">
+                    <i class="fa-solid fa-location-dot text-rs-red"></i>
+                    Santiago - RS • 1 Fábrica + 8 Lojas de Varejo
+                </span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-3 text-xs">
+                    <span class="text-slate-400 hidden lg:inline">Canais Oficiais:</span>
+                    <a href="https://www.instagram.com/fabricapampeiro/" target="_blank" rel="noopener noreferrer" class="hover:text-rs-yellow transition flex items-center gap-1" title="Instagram Fábrica">
+                        <i class="fa-brands fa-instagram text-pink-400"></i>
+                        <span class="hidden sm:inline">Fábrica</span>
+                    </a>
+                    <a href="https://www.instagram.com/pampeirovariedades/" target="_blank" rel="noopener noreferrer" class="hover:text-rs-yellow transition flex items-center gap-1" title="Instagram Variedades">
+                        <i class="fa-brands fa-instagram text-amber-400"></i>
+                        <span class="hidden sm:inline">Variedades</span>
+                    </a>
+                    <a href="https://www.facebook.com/Bombachaspampeiro/?locale=pt_BR" target="_blank" rel="noopener noreferrer" class="hover:text-rs-yellow transition flex items-center gap-1" title="Facebook Bombachas">
+                        <i class="fa-brands fa-facebook-f text-blue-400"></i>
+                        <span class="hidden sm:inline">Facebook</span>
+                    </a>
+                </div>
+                <a href="tel:5532510067" class="font-bold text-white hover:text-rs-yellow transition flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                    <i class="fa-solid fa-phone text-rs-yellow text-xs"></i> (55) 3251-0067
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <header class="sticky top-[5px] z-40 bg-rs-red/95 backdrop-blur-md text-white shadow-taste-md border-b border-rs-yellow/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Official Logo Map Anchor -->
+                <a href="#inicio" class="flex items-center gap-3.5 group py-1">
+                    <div class="bg-white p-1.5 rounded-2xl shadow-md border-2 border-rs-yellow group-hover:scale-105 transition transform flex items-center justify-center overflow-hidden w-14 h-14 relative">
+                        <img src="logopampeiro.jpg" 
+                             onerror="handleImageError(this, 'logo')" 
+                             alt="Logo Mapa RS Grupo Pampeiro - Santiago/RS" 
+                             class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl sm:text-2xl font-black tracking-tight block leading-none text-white group-hover:text-rs-yellow transition">GRUPO PAMPEIRO</span>
+                        <span class="text-[10px] sm:text-[11px] tracking-widest text-rs-yellow uppercase font-extrabold block mt-1">Santiago • Rio Grande do Sul</span>
+                    </div>
+                </a>
+
+                <!-- Impeccable Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-bold tracking-wide">
+                    <a href="#inicio" class="hover:text-rs-yellow transition py-1 relative group">
+                        Início
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-rs-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#historia" class="hover:text-rs-yellow transition py-1 relative group">
+                        História do Grupo
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-rs-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#estrutura" class="hover:text-rs-yellow transition py-1 relative group">
+                        Fábrica & 8 Lojas
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-rs-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#vitrine" class="hover:text-rs-yellow transition py-1 relative group">
+                        Produtos Reais
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-rs-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#depoimentos" class="hover:text-rs-yellow transition py-1 relative group">
+                        Avaliações
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-rs-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#localizacao" class="hover:text-rs-yellow transition py-1 relative group">
+                        Localização
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-rs-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </nav>
+
+                <!-- Header Actions CTA -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Grupo%20Pampeiro%20e%20gostaria%20de%20atendimento." 
+                       target="_blank"
+                       class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-2.5 rounded-full flex items-center gap-2 shadow-glow-gold hover:shadow-emerald-500/40 transition transform hover:-translate-y-0.5 text-xs sm:text-sm border border-emerald-300">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Geral</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Drawer Menu Toggle -->
+                <button id="mobile-menu-btn" aria-label="Abrir Menu" class="lg:hidden text-white hover:text-rs-yellow p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-pampeiro-dark border-t border-white/10 px-4 pt-4 pb-6 space-y-3">
+            <a href="#inicio" class="block text-slate-200 hover:text-rs-yellow py-2 font-semibold">Início</a>
+            <a href="#historia" class="block text-slate-200 hover:text-rs-yellow py-2 font-semibold">História do Grupo</a>
+            <a href="#estrutura" class="block text-slate-200 hover:text-rs-yellow py-2 font-semibold">Fábrica & 8 Lojas</a>
+            <a href="#vitrine" class="block text-slate-200 hover:text-rs-yellow py-2 font-semibold">Produtos Reais</a>
+            <a href="#depoimentos" class="block text-slate-200 hover:text-rs-yellow py-2 font-semibold">Avaliações (4.8★)</a>
+            <a href="#localizacao" class="block text-slate-200 hover:text-rs-yellow py-2 font-semibold">Localização & Contato</a>
+            <div class="pt-3">
+                <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Grupo%20Pampeiro" 
+                   target="_blank"
+                   class="w-full bg-emerald-500 text-slate-950 font-extrabold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-gradient text-white relative py-16 lg:py-24 border-b-4 border-rs-yellow overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Copy Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <div class="inline-flex items-center gap-2.5 bg-black/70 border border-rs-yellow/60 px-4 py-2 rounded-full backdrop-blur-md shadow-lg">
+                        <span class="flex gap-1">
+                            <span class="w-2.5 h-2.5 rounded-full bg-rs-red inline-block"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-rs-yellow inline-block"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-rs-green inline-block"></span>
+                        </span>
+                        <span class="text-xs font-extrabold tracking-wider text-rs-yellow uppercase">Santiago/RS • Quase 3 Décadas de História</span>
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+                        A Força da Confecção Própria & 8 Lojas em Santiago.
+                    </h1>
+
+                    <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+                        Fundado em 1998 por <strong class="text-rs-yellow font-bold">Janaína Vargas e Gilmar Diettrich</strong>, o Grupo Pampeiro reúne <strong class="text-white font-bold">1 grande fábrica com distribuição para o Mercosul</strong> e <strong class="text-rs-yellow font-bold">8 lojas de varejo</strong> especializadas em vestuário tradicionalista, calçados, colchões, enxovais e variedades.
+                    </p>
+
+                    <!-- Google Rating Badge -->
+                    <div class="flex items-center gap-3 bg-white/10 p-3.5 rounded-2xl backdrop-blur-md border border-white/20 w-fit shadow-taste-sm">
+                        <div class="flex text-rs-yellow text-base gap-0.5">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-white">
+                            <strong class="text-rs-yellow">4,8 / 5,0</strong> (+4.820 avaliações de clientes no Google)
+                        </span>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-3">
+                        <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20atendimento%20do%20Grupo%20Pampeiro." 
+                           target="_blank"
+                           class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-center px-8 py-4 rounded-xl shadow-glow-gold flex items-center justify-center gap-3 transition transform hover:-translate-y-1 text-sm sm:text-base">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Atendimento Geral no WhatsApp</span>
+                        </a>
+
+                        <a href="#estrutura" 
+                           class="bg-rs-red/80 hover:bg-rs-red text-white border border-rs-yellow/80 font-bold px-6 py-4 rounded-xl flex items-center justify-center gap-2.5 backdrop-blur-md transition transform hover:-translate-y-0.5 text-sm sm:text-base">
+                            <i class="fa-solid fa-store text-rs-yellow"></i>
+                            <span>Conhecer As 8 Lojas</span>
+                        </a>
+                    </div>
+
+                    <!-- Key Metrics Grid -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/20 text-center sm:text-left">
+                        <div>
+                            <span class="block font-serif text-2xl sm:text-3xl font-black text-rs-yellow">9 Unidades</span>
+                            <span class="text-xs text-slate-300 font-medium">1 Fábrica + 8 Lojas</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-2xl sm:text-3xl font-black text-rs-yellow">Desde 1998</span>
+                            <span class="text-xs text-slate-300 font-medium">Quase 30 Anos de Tradição</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-2xl sm:text-3xl font-black text-rs-yellow">Mercosul</span>
+                            <span class="text-xs text-slate-300 font-medium">Atacado & Varejo Próprio</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Photo Stack Card Right -->
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-rs-red via-rs-yellow to-rs-redDark opacity-90 blur-lg"></div>
+                        
+                        <div class="relative bg-pampeiro-dark border border-white/20 rounded-2xl overflow-hidden shadow-taste-lg p-4 space-y-4">
+                            
+                            <!-- Main Showcase Card: pampeiro13_2.jpg (Bombacha / Model) -->
+                            <div class="relative rounded-xl overflow-hidden h-64 group border border-rs-yellow/40 bg-stone-900">
+                                <img src="pampeiro13_2.jpg" 
+                                     onerror="handleImageError(this, 'bombachaModel')" 
+                                     alt="Tradição em Vestir com Qualidade Pampeiro" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex items-end p-4">
+                                    <div>
+                                        <span class="bg-rs-red text-white font-bold text-[10px] px-2.5 py-0.5 rounded uppercase">Tradição & Elegância</span>
+                                        <p class="text-xs text-rs-yellow font-bold mt-1">Bombachas Pampeiro: Caimento Perfeito e Acabamento em Couro</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Thumbnails Showcase -->
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="h-20 rounded-lg overflow-hidden border border-white/20 relative group bg-stone-900" title="Confecção Própria na Fábrica Pampeiro">
+                                    <img src="pampeiro14_2.jpg" 
+                                         onerror="handleImageError(this, 'fabricaSewing')" 
+                                         alt="Bordado e Confecção Fábrica Pampeiro" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition">
+                                    <span class="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] text-center text-rs-yellow font-bold py-0.5">Direto da Fábrica</span>
+                                </div>
+                                <div class="h-20 rounded-lg overflow-hidden border border-white/20 relative group bg-stone-900" title="Botas em Couro Legítimo">
+                                    <img src="pampeiro7.jpeg" 
+                                         onerror="handleImageError(this, 'botas')" 
+                                         alt="Botas de Couro Pampeiro" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition">
+                                    <span class="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] text-center text-rs-yellow font-bold py-0.5">Calçados de Couro</span>
+                                </div>
+                                <div class="h-20 rounded-lg overflow-hidden border border-white/20 relative group bg-stone-900" title="Kits de Chimarrão">
+                                    <img src="pampeiro4.jpeg" 
+                                         onerror="handleImageError(this, 'mateiras')" 
+                                         alt="Artigos de Chimarrão Pampeiro" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition">
+                                    <span class="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] text-center text-rs-yellow font-bold py-0.5">Chimarrão & Lojas</span>
+                                </div>
+                            </div>
+
+                            <!-- Live Open Status Badge -->
+                            <div class="bg-rs-redDark/90 p-3 rounded-xl border border-rs-yellow/40 flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    <span class="text-xs font-bold text-white">Unidades Abertas em Santiago/RS</span>
+                                </div>
+                                <a href="tel:5532510067" class="text-xs text-rs-yellow font-bold hover:underline">(55) 3251-0067</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="py-20 bg-grid-pattern relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Photos Stack Left -->
+                <div class="lg:col-span-5 relative space-y-4">
+                    <div class="relative rounded-2xl overflow-hidden shadow-taste-md border-4 border-rs-red bg-stone-900">
+                        <img src="pampeiro2.jpg" 
+                             onerror="handleImageError(this, 'fabricaFacade')" 
+                             alt="Fábrica Pampeiro e Gilmar Uniformes Santiago RS" 
+                             class="w-full h-[360px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex items-end p-5">
+                            <div class="text-white">
+                                <span class="bg-rs-yellow text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">Origem do Grupo (1998)</span>
+                                <h3 class="font-serif text-xl font-bold mt-1 text-white">Fábrica de Bombachas & Gilmar Uniformes</h3>
+                                <p class="text-xs text-slate-300 mt-0.5">Estrutura fabril responsável pela produção de bombachas e uniformes corporativos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden shadow-taste-sm h-36 border-2 border-rs-red/30 bg-stone-900 relative">
+                            <img src="pampeiro14_2.jpg" 
+                                 onerror="handleImageError(this, 'fabricaSewing')" 
+                                 alt="Detalhes de bordado da logo Pampeiro" 
+                                 class="w-full h-full object-cover">
+                            <span class="absolute bottom-0 inset-x-0 bg-black/80 text-[10px] text-rs-yellow text-center py-1 font-bold">Rigor de Confecção Própria</span>
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-taste-sm h-36 border-2 border-rs-red/30 bg-stone-900 relative">
+                            <img src="Pampeiro1.jpg" 
+                                 onerror="handleImageError(this, 'store1')" 
+                                 alt="Loja Bombachas Pampeiro Esquina Santiago" 
+                                 class="w-full h-full object-cover">
+                            <span class="absolute bottom-0 inset-x-0 bg-black/80 text-[10px] text-rs-yellow text-center py-1 font-bold">Lojas no Centro de Santiago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Right: Real Timeline -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-rs-red font-extrabold text-xs uppercase tracking-widest">
+                            <i class="fa-solid fa-industry"></i>
+                            <span>Trajetória Real de Trabalho em Santiago/RS</span>
+                        </div>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-black text-pampeiro-dark leading-tight">
+                            Quase 30 Anos de História: Da Indústria de Uniformes a 8 Lojas de Varejo.
+                        </h2>
+                    </div>
+
+                    <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+                        A jornada do <strong class="text-slate-900">Grupo Pampeiro</strong> teve início em <strong class="text-slate-900">1998</strong>, liderada pelos empresários <strong class="text-slate-900">Janaína Vargas e Gilmar Diettrich</strong>. O negócio começou focado na fabricação industrial de uniformes empresariais e na confecção de bombachas.
+                    </p>
+
+                    <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+                        Com o rigor produtivo e o padrão de qualidade da <strong class="text-slate-900">Fábrica Pampeiro</strong>, a marca expandiu sua atuação para o atacado, fornecendo indumentária gaúcha para todo o Brasil e países do Mercosul.
+                    </p>
+
+                    <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+                        A primeira loja física de varejo surgiu em <strong class="text-slate-900">2015</strong>, anexa à fábrica. A partir daí, o Grupo manteve um plano de crescimento consistente baseado em excelente atendimento, preço justo e localizações estratégicas:
+                    </p>
+
+                    <!-- Real Timeline Highlights Grid -->
+                    <div class="grid sm:grid-cols-3 gap-3.5 pt-2">
+                        <div class="bg-white p-4 rounded-xl border-t-4 border-rs-red shadow-taste-sm">
+                            <span class="text-xs font-black text-rs-red">1998 — A Origem</span>
+                            <p class="text-xs font-bold text-slate-900 mt-1">Fábrica Pampeiro</p>
+                            <p class="text-[11px] text-slate-600 mt-0.5">Confecção de bombachas e uniformes para atacado e Mercosul.</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border-t-4 border-rs-yellow shadow-taste-sm">
+                            <span class="text-xs font-black text-amber-600">2015 a 2018</span>
+                            <p class="text-xs font-bold text-slate-900 mt-1">Primeiras Lojas</p>
+                            <p class="text-[11px] text-slate-600 mt-0.5">1ª loja em anexo à fábrica e expansão para a 2ª unidade de varejo.</p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border-t-4 border-rs-green shadow-taste-sm">
+                            <span class="text-xs font-black text-emerald-700">2020 a 2026</span>
+                            <p class="text-xs font-bold text-slate-900 mt-1">8 Unidades de Varejo</p>
+                            <p class="text-[11px] text-slate-600 mt-0.5">Calçados, Outlet, Colchões & Enxovais, Pilchas e Variedades.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="estrutura" class="py-20 bg-pampeiro-dark text-white border-y-4 border-rs-yellow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="bg-rs-red text-white text-xs font-extrabold px-3.5 py-1 rounded-full uppercase tracking-wider">Estrutura Operacional em Santiago/RS</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-black">1 Fábrica + 8 Lojas de Varejo</h2>
+                <p class="text-slate-300 text-sm sm:text-base">Conheça a atuação e os segmentos atendidos pelas unidades do Grupo Pampeiro.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Business Card 1: A Fábrica -->
+                <div class="bg-pampeiro-darkCard rounded-2xl border border-rs-yellow/30 overflow-hidden shadow-taste-md hover:border-rs-yellow card-taste-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-stone-900">
+                            <img src="pampeiro14_2.jpg" 
+                                 onerror="handleImageError(this, 'fabricaSewing')" 
+                                 alt="Confecção na Fábrica Pampeiro" 
+                                 class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-rs-yellow text-slate-950 font-bold text-[10px] px-2.5 py-1 rounded">Origem & Atacado</span>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-rs-yellow">Fábrica de Bombachas</h3>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Desde 1998. Unidade industrial responsável pela fabricação própria de bombachas e uniformes empresariais, atendendo atacado no Mercosul e lojas próprias.
+                            </p>
+                            <div class="text-[11px] text-slate-400 border-t border-white/10 pt-2 space-y-1">
+                                <p><i class="fa-solid fa-scissors text-rs-yellow mr-1"></i> Corte & Costura de Alta Precisão</p>
+                                <p><i class="fa-brands fa-instagram text-pink-400 mr-1"></i> @fabricapampeiro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20Atacado%20da%20F%C3%A1brica%20Pampeiro" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1 text-sm"></i> Falar com a Fábrica
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Business Card 2: Lojas de Pilchas -->
+                <div class="bg-pampeiro-darkCard rounded-2xl border border-rs-yellow/30 overflow-hidden shadow-taste-md hover:border-rs-yellow card-taste-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-stone-900">
+                            <img src="pampeiro13_2.jpg" 
+                                 onerror="handleImageError(this, 'bombachaModel')" 
+                                 alt="Bombachas Pampeiro Santiago" 
+                                 class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-rs-red text-white font-bold text-[10px] px-2.5 py-1 rounded">Lojas de Pilchas</span>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-rs-yellow">Bombachas & Pilchas</h3>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Pontos de varejo especializados em vestir gaúchos e gaúchas com bombachas masculinas, femininas e infantis, chapéus, lenços e guaiacas.
+                            </p>
+                            <div class="text-[11px] text-slate-400 border-t border-white/10 pt-2 space-y-1">
+                                <p><i class="fa-solid fa-location-dot text-rs-red mr-1"></i> Av. Getúlio Vargas, 1662 - Centro</p>
+                                <p><i class="fa-solid fa-location-dot text-rs-red mr-1"></i> R. Barão do Ladário, 1731 - Centro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20na%20loja%20Bombachas%20Pampeiro" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1 text-sm"></i> Lojas de Pilchas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Business Card 3: Calçados & Outlet -->
+                <div class="bg-pampeiro-darkCard rounded-2xl border border-rs-yellow/30 overflow-hidden shadow-taste-md hover:border-rs-yellow card-taste-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-stone-900">
+                            <img src="pampeiro7.jpeg" 
+                                 onerror="handleImageError(this, 'botas')" 
+                                 alt="Calçados Pampeiro e Outlet Santiago" 
+                                 class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-amber-800 text-white font-bold text-[10px] px-2.5 py-1 rounded">Calçados & Outlet</span>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-rs-yellow">Calçados & Outlet</h3>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Unidades focadas em calçados masculinos, femininos e infantis, botas em couro legítimo, sapatilhas e alpargatas da marca GP Pampeiro.
+                            </p>
+                            <div class="text-[11px] text-slate-400 border-t border-white/10 pt-2 space-y-1">
+                                <p><i class="fa-solid fa-shoe-prints text-amber-400 mr-1"></i> Marca Própria GP Pampeiro</p>
+                                <p><i class="fa-solid fa-tags text-amber-300 mr-1"></i> Lojas Calçados Pampeiro e Outlet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20cal%C3%A7ados%20nas%20lojas%20Pampeiro" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1 text-sm"></i> Ver Calçados
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Business Card 4: Colchões, Enxovais & Variedades -->
+                <div class="bg-pampeiro-darkCard rounded-2xl border border-rs-yellow/30 overflow-hidden shadow-taste-md hover:border-rs-yellow card-taste-hover flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-stone-900">
+                            <img src="pampeiro6.jpeg" 
+                                 onerror="handleImageError(this, 'interiores')" 
+                                 alt="Loja de Colchões, Enxovais e Pampeiro Variedades" 
+                                 class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-emerald-700 text-white font-bold text-[10px] px-2.5 py-1 rounded">Enxovais & Variedades</span>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <h3 class="font-serif text-xl font-bold text-rs-yellow">Colchões, Enxovais & Variedades</h3>
+                            <p class="text-slate-300 text-xs leading-relaxed">
+                                Lojas de conforto para o lar com colchões, roupas de cama, mesa, banho e a loja Pampeiro Variedades com opções de presentes e utilidades.
+                            </p>
+                            <div class="text-[11px] text-slate-400 border-t border-white/10 pt-2 space-y-1">
+                                <p><i class="fa-solid fa-bed text-emerald-400 mr-1"></i> Colchões e Enxovais Pampeiro</p>
+                                <p><i class="fa-brands fa-instagram text-amber-400 mr-1"></i> @pampeirovariedades</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Colch%C3%B5es,%20Enxovais%20ou%20Variedades" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1 text-sm"></i> Ver Enxovais & Variedades
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="vitrine" class="py-20 bg-pampeiro-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-rs-red font-extrabold text-xs uppercase tracking-widest">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Galeria Real das Lojas e Fábrica</span>
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-pampeiro-dark mt-1">
+                        Produtos e Ambientes Reais do Grupo Pampeiro
+                    </h2>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap gap-2" id="filter-buttons">
+                    <button onclick="filterCategory('all', this)" class="cat-btn active bg-rs-red text-white px-4 py-2 rounded-full text-xs font-bold shadow-taste-sm transition">Todos os Produtos</button>
+                    <button onclick="filterCategory('bombachas', this)" class="cat-btn bg-white text-slate-700 hover:bg-stone-200 px-4 py-2 rounded-full text-xs font-bold shadow-taste-sm transition">Bombachas & Pilchas</button>
+                    <button onclick="filterCategory('fabrica', this)" class="cat-btn bg-white text-slate-700 hover:bg-stone-200 px-4 py-2 rounded-full text-xs font-bold shadow-taste-sm transition">Direto da Fábrica</button>
+                    <button onclick="filterCategory('botas', this)" class="cat-btn bg-white text-slate-700 hover:bg-stone-200 px-4 py-2 rounded-full text-xs font-bold shadow-taste-sm transition">Calçados & Botas</button>
+                    <button onclick="filterCategory('chimarrao', this)" class="cat-btn bg-white text-slate-700 hover:bg-stone-200 px-4 py-2 rounded-full text-xs font-bold shadow-taste-sm transition">Chimarrão & Acessórios</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="products-grid">
+                
+                <!-- Product Card 1: Bombachas Tradicionais (pampeiro13_2.jpg) -->
+                <div class="prod-card bombachas bg-white rounded-2xl overflow-hidden shadow-taste-sm border border-stone-200 card-taste-hover group">
+                    <div class="h-64 overflow-hidden relative bg-stone-900">
+                        <img src="pampeiro13_2.jpg" 
+                             onerror="handleImageError(this, 'bombachaModel')" 
+                             alt="Bombachas Pampeiro com cinto de couro" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-rs-red text-white font-bold text-[10px] px-2.5 py-1 rounded-md">Pilchas Gaúchas</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs text-rs-red font-bold">Variedade e Caimento</span>
+                        <h4 class="font-bold text-slate-800 text-base">Bombachas Masculinas & Femininas</h4>
+                        <p class="text-xs text-slate-600">Modelos exclusivos confeccionados com tecidos de alta durabilidade e acabamento refinado para o dia a dia e rodeios.</p>
+                        <a href="https://wa.me/555532510067?text=Quero%20ver%20modelos%20e%20tamanhos%20de%20Bombachas%20Pampeiro" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Ver Modelos de Bombachas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: Processo de Bordado Fábrica (pampeiro14_2.jpg) -->
+                <div class="prod-card fabrica bg-white rounded-2xl overflow-hidden shadow-taste-sm border border-stone-200 card-taste-hover group">
+                    <div class="h-64 overflow-hidden relative bg-stone-900">
+                        <img src="pampeiro14_2.jpg" 
+                             onerror="handleImageError(this, 'fabricaSewing')" 
+                             alt="Bordado da logo Pampeiro direto na fábrica" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-rs-yellow text-slate-950 font-bold text-[10px] px-2.5 py-1 rounded-md">Atacado & Confecção</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs text-rs-red font-bold">Produção Industrial Própria</span>
+                        <h4 class="font-bold text-slate-800 text-base">Produtos Direto da Fábrica</h4>
+                        <p class="text-xs text-slate-600">Costura reforçada, bordados originais e produção de uniformes corporativos e indumentária para todo o Mercosul.</p>
+                        <a href="https://wa.me/555532510067?text=Quero%20cotar%20produtos%20direto%20da%20F%C3%A1brica%20Pampeiro" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Cotar no Atacado da Fábrica
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: Botas (pampeiro7.jpeg) -->
+                <div class="prod-card botas bg-white rounded-2xl overflow-hidden shadow-taste-sm border border-stone-200 card-taste-hover group">
+                    <div class="h-64 overflow-hidden relative bg-stone-900">
+                        <img src="pampeiro7.jpeg" 
+                             onerror="handleImageError(this, 'botas')" 
+                             alt="Botas de Couro Lojas Pampeiro" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-amber-800 text-white font-bold text-[10px] px-2.5 py-1 rounded-md">Lojas de Calçados</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs text-rs-red font-bold">Couro Legítimo</span>
+                        <h4 class="font-bold text-slate-800 text-base">Botas Campeiras em Couro</h4>
+                        <p class="text-xs text-slate-600">Ampla linha de botas masculinas e femininas em couro legítimo caramelo, castanho e preto nas lojas do grupo.</p>
+                        <a href="https://wa.me/555532510067?text=Quero%20consultar%20tamanhos%20e%20pre%C3%A7os%20de%20Botas%20de%20Couro" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Consultar Botas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 4: Camisetas RS (pampeiro11.jpg) -->
+                <div class="prod-card bombachas bg-white rounded-2xl overflow-hidden shadow-taste-sm border border-stone-200 card-taste-hover group">
+                    <div class="h-64 overflow-hidden relative bg-stone-900">
+                        <img src="pampeiro11.jpg" 
+                             onerror="handleImageError(this, 'camisetas')" 
+                             alt="Camisetas do RS Pampeiro Variedades" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-rs-yellow text-slate-950 font-bold text-[10px] px-2.5 py-1 rounded-md">Brasão do RS</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs text-rs-red font-bold">Moda Tradicionalista</span>
+                        <h4 class="font-bold text-slate-800 text-base">Camisetas com Brasão do RS</h4>
+                        <p class="text-xs text-slate-600">Camisetas temáticas com as cores Farroupilhas e o símbolo da República Rio-Grandense para toda a família.</p>
+                        <a href="https://wa.me/555532510067?text=Quero%20ver%20tamanhos%20de%20Camisetas%20com%20Bras%C3%A3o%20do%20RS" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Ver Camisetas RS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 5: Mateiras e Cuias (pampeiro4.jpeg) -->
+                <div class="prod-card chimarrao bg-white rounded-2xl overflow-hidden shadow-taste-sm border border-stone-200 card-taste-hover group">
+                    <div class="h-64 overflow-hidden relative bg-stone-900">
+                        <img src="pampeiro4.jpeg" 
+                             onerror="handleImageError(this, 'mateiras')" 
+                             alt="Kits de Chimarrão Bombachas Pampeiro" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-rs-yellow text-slate-950 font-bold text-[10px] px-2.5 py-1 rounded-md">Tradição do Mate</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs text-rs-red font-bold">Utilidades para o Chimarrão</span>
+                        <h4 class="font-bold text-slate-800 text-base">Mateiras, Cuias & Garrafas</h4>
+                        <p class="text-xs text-slate-600">Conjuntos revestidos em couro trabalhado com a insígnia gaúcha nas lojas Bombachas Pampeiro e Variedades.</p>
+                        <a href="https://wa.me/555532510067?text=Quero%20ver%20as%20Mateiras%20e%20Cuias" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Ver Mateiras e Cuias
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 6: Guaiacas e Cintos (pampeiro9.jpeg) -->
+                <div class="prod-card bombachas bg-white rounded-2xl overflow-hidden shadow-taste-sm border border-stone-200 card-taste-hover group">
+                    <div class="h-64 overflow-hidden relative bg-stone-900">
+                        <img src="pampeiro9.jpeg" 
+                             onerror="handleImageError(this, 'cintos')" 
+                             alt="Guaiacas e Cintos de Couro" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-pampeiro-leather text-white font-bold text-[10px] px-2.5 py-1 rounded-md">Acabamento em Couro</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <span class="text-xs text-rs-red font-bold">Acessórios da Pilcha</span>
+                        <h4 class="font-bold text-slate-800 text-base">Guaiacas & Cintos Bordados</h4>
+                        <p class="text-xs text-slate-600">Fivelas metálicas, trançados e couro nobre de alta resistência para compor a pilcha gaúcha.</p>
+                        <a href="https://wa.me/555532510067?text=Quero%20saber%20op%C3%A7%C3%B5es%20de%20Guaiacas%20e%20Cintos" target="_blank" class="block w-full text-center bg-rs-red hover:bg-rs-redDark text-white font-bold py-2.5 rounded-xl text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Consultar Guaiacas
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="py-20 bg-rs-red text-white relative border-y-4 border-rs-yellow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-pampeiro-dark rounded-3xl p-8 lg:p-12 border-2 border-rs-yellow shadow-taste-lg relative overflow-hidden">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-5 space-y-4 border-b lg:border-b-0 lg:border-r border-white/20 pb-8 lg:pb-0 lg:pr-8">
+                        <span class="bg-rs-yellow text-slate-950 text-xs font-black px-3.5 py-1 rounded-full uppercase">Avaliações Reais no Google</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-black">4.820+ Clientes Atendidos com Excelência</h2>
+                        <div class="flex items-center gap-4 pt-2">
+                            <span class="text-5xl font-black text-rs-yellow font-serif">4.8</span>
+                            <div>
+                                <div class="flex text-rs-yellow text-base gap-0.5">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-xs text-slate-300 mt-1">Classificação oficial no Google Maps Santiago/RS.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 space-y-4">
+                        <!-- Google Review Real Card -->
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-rs-yellow/40 space-y-3">
+                            <div class="flex text-rs-yellow text-xs gap-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <blockquote class="text-sm text-slate-100 leading-relaxed italic">
+                                "Aqui você encontra as melhores Pilchas gaúchas, calçados de couro com qualidade, chapéu e outros itens para cevar teu chimarrão. Venha para a Bombachas Pampeiro - filial 1!"
+                            </blockquote>
+                            <div class="flex items-center justify-between text-xs text-rs-yellow pt-2 border-t border-white/10">
+                                <span class="font-bold">— Cliente Verificado no Google Maps</span>
+                                <span class="bg-rs-red text-white px-2.5 py-0.5 rounded text-[10px]">Bombachas Pampeiro</span>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                                <p class="text-xs text-slate-300 italic">"Atendimento maravilhoso da Janaína, do Gilmar e equipe. As bombachas da fábrica têm tecido excelente e muita durabilidade."</p>
+                                <span class="block text-[11px] text-rs-yellow font-semibold mt-2">— Cliente de Santiago/RS</span>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                                <p class="text-xs text-slate-300 italic">"Grande variedade em calçados, colchões, enxovais e artigos gaúchos. O Grupo Pampeiro é um orgulho para Santiago!"</p>
+                                <span class="block text-[11px] text-rs-yellow font-semibold mt-2">— Avaliação no Google</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="localizacao" class="py-20 bg-pampeiro-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <span class="bg-rs-red text-white text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider">Atendimento Presencial</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-pampeiro-dark">Localização e Endereços em Santiago/RS</h2>
+                <p class="text-slate-600 text-sm">Visite nossas lojas no centro de Santiago ou nossa fábrica de bombachas.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Address Box Left -->
+                <div class="lg:col-span-5 bg-white p-8 rounded-2xl shadow-taste-md border-t-4 border-rs-red space-y-6 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-rs-red/10 text-rs-red flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Endereços das Unidades</h4>
+                                <p class="text-slate-800 font-bold text-xs sm:text-sm mt-1.5">• Bombachas Pampeiro (Loja Filial 1):</p>
+                                <p class="text-slate-600 text-xs">Av. Getúlio Vargas, 1662 - Centro, Santiago - RS</p>
+                                <p class="text-slate-800 font-bold text-xs sm:text-sm mt-2">• Fábrica & Gilmar Uniformes:</p>
+                                <p class="text-slate-600 text-xs">R. Barão do Ladário, 1731 - Centro, Santiago - RS</p>
+                                <p class="text-slate-500 text-[11px] mt-1.5 font-bold text-amber-800">+ Unidades de Calçados, Enxovais e Variedades em Santiago</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-rs-yellow/20 text-rs-redDark flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Telefone e WhatsApp Geral</h4>
+                                <p class="text-slate-800 font-black text-base mt-1">(55) 3251-0067</p>
+                                <p class="text-slate-500 text-xs">Central de atendimento para fábrica e lojas de varejo</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 text-xl font-bold">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Horário de Atendimento</h4>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-1"><strong>Segunda a Sexta:</strong> 08:30 - 12:00 | 13:30 - 18:30</p>
+                                <p class="text-slate-600 text-xs sm:text-sm"><strong>Sábado:</strong> 08:30 - 12:30</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 space-y-3">
+                        <a href="https://maps.google.com/?q=Av.+Get%C3%BAlio+Vargas,+1662+-+Centro,+Santiago+-+RS,+97700-365" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="w-full bg-rs-red hover:bg-rs-redDark text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition shadow-md">
+                            <i class="fa-solid fa-diamond-turn-right text-rs-yellow text-sm"></i>
+                            <span>Abrir Rota no Google Maps</span>
+                        </a>
+
+                        <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20de%20atendimento%20nas%20lojas" 
+                           target="_blank" 
+                           class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Atendimento Imediato no Whats</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embedded Right -->
+                <div class="lg:col-span-7 bg-white p-3 rounded-2xl shadow-taste-md border border-stone-200 min-h-[380px] flex flex-col">
+                    <div class="w-full h-full min-h-[360px] rounded-xl overflow-hidden relative border border-stone-300 bg-stone-100">
+                        <iframe 
+                            title="Mapa do Grupo Pampeiro Santiago RS"
+                            src="https://maps.google.com/maps?q=Av.+Get%C3%BAlio+Vargas,+1662+-+Centro,+Santiago+-+RS,+97700-365&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            class="w-full h-full border-0 absolute inset-0"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-pampeiro-dark text-slate-300 pt-16 pb-8 border-t-4 border-rs-yellow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Col 1: About Group -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-white p-1 rounded-lg w-10 h-10 flex items-center justify-center overflow-hidden">
+                            <img src="logopampeiro.jpg" 
+                                 onerror="handleImageError(this, 'logo')" 
+                                 alt="Logo Grupo Pampeiro" 
+                                 class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="font-serif text-lg font-bold text-white">GRUPO PAMPEIRO</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Fundado em 1998 por Janaína Vargas e Gilmar Diettrich. Grupo empresarial composto por 1 fábrica e 8 lojas de varejo em Santiago/RS focadas em indumentária gaúcha, calçados, colchões, enxovais e variedades.
+                    </p>
+                    <p class="text-xs text-rs-yellow font-bold">
+                        Santiago • Rio Grande do Sul
+                    </p>
+                </div>
+
+                <!-- Col 2: Fast Nav Links -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-white text-sm border-l-2 border-rs-red pl-2">Navegação</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#inicio" class="hover:text-rs-yellow transition">Início</a></li>
+                        <li><a href="#historia" class="hover:text-rs-yellow transition">Nossa História (Desde 1998)</a></li>
+                        <li><a href="#estrutura" class="hover:text-rs-yellow transition">1 Fábrica + 8 Lojas de Varejo</a></li>
+                        <li><a href="#vitrine" class="hover:text-rs-yellow transition">Galeria de Produtos</a></li>
+                        <li><a href="#depoimentos" class="hover:text-rs-yellow transition">Avaliações (4.8★)</a></li>
+                        <li><a href="#localizacao" class="hover:text-rs-yellow transition">Endereços & Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Direct Official Social Media Links -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-white text-sm border-l-2 border-rs-yellow pl-2">Redes Sociais Oficiais</h4>
+                    <p class="text-xs text-slate-400">Acompanhe lançamentos e ofertas:</p>
+                    <div class="space-y-2 pt-1">
+                        <a href="https://www.instagram.com/fabricapampeiro/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs text-slate-200 hover:text-rs-yellow transition bg-white/5 p-2 rounded-lg border border-white/10">
+                            <i class="fa-brands fa-instagram text-pink-400 text-base"></i>
+                            <span>@fabricapampeiro</span>
+                        </a>
+                        <a href="https://www.instagram.com/pampeirovariedades/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs text-slate-200 hover:text-rs-yellow transition bg-white/5 p-2 rounded-lg border border-white/10">
+                            <i class="fa-brands fa-instagram text-amber-400 text-base"></i>
+                            <span>@pampeirovariedades</span>
+                        </a>
+                        <a href="https://www.facebook.com/Bombachaspampeiro/?locale=pt_BR" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs text-slate-200 hover:text-rs-yellow transition bg-white/5 p-2 rounded-lg border border-white/10">
+                            <i class="fa-brands fa-facebook-f text-blue-400 text-sm"></i>
+                            <span>Bombachas Pampeiro</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 4: Contacts -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-white text-sm border-l-2 border-emerald-500 pl-2">Fale Conosco</h4>
+                    <p class="text-xs text-slate-400"><i class="fa-solid fa-phone text-rs-yellow mr-1"></i> (55) 3251-0067</p>
+                    <p class="text-xs text-slate-400"><i class="fa-solid fa-envelope text-rs-yellow mr-1"></i> bombachaspampeiro@hotmail.com</p>
+                    <p class="text-xs text-slate-400"><i class="fa-solid fa-location-dot text-rs-red mr-1"></i> Santiago / Rio Grande do Sul</p>
+                    
+                    <div class="pt-2">
+                        <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Grupo%20Pampeiro" 
+                           target="_blank" 
+                           class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs transition shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>WhatsApp Direto</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Credits -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>© 2026 Grupo Pampeiro — Santiago/RS. Todos os direitos reservados.</p>
+                <div class="flex items-center gap-2 text-rs-yellow font-bold">
+                    <span>Tradição do Rio Grande do Sul</span>
+                    <i class="fa-solid fa-heart text-rs-red"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Pulse CTA Button -->
+    <a href="https://wa.me/555532510067?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Grupo%20Pampeiro%20e%20gostaria%20de%20atendimento." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Falar no WhatsApp"
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-slate-950 p-4 rounded-full shadow-taste-lg flex items-center justify-center transition transform hover:scale-110 group border-2 border-white">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out font-extrabold text-xs pl-0 group-hover:pl-2">
+            Atendimento Pampeiro
+        </span>
+    </a>
+
+    <!-- JavaScript Handling Fallbacks & Interactivity -->
+    <script>
+        // High quality thematic fallbacks map for smooth preview experience
+        const fallbackMap = {
+            logo: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><path fill='%230F5229' d='M20,60 Q80,20 160,40 Q180,100 120,170 Q40,160 20,60 Z'/><path fill='%23B80C28' d='M50,80 Q100,50 170,70 Q160,130 100,160 Q60,120 50,80 Z'/><path fill='%23F2B827' d='M80,110 Q120,80 150,110 Q140,160 90,170 Q70,140 80,110 Z'/><text x='100' y='105' font-family='serif' font-weight='bold' font-size='14' fill='%23ffffff' text-anchor='middle'>PAMPEIRO</text></svg>",
+            bombachaModel: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=80",
+            fabricaSewing: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80",
+            store1: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+            fabricaFacade: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+            interiores: "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=800&q=80",
+            botas: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+            camisetas: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+            mateiras: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
+            cintos: "https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=800&q=80"
+        };
+
+        function handleImageError(img, type) {
+            img.onerror = null;
+            if (fallbackMap[type]) {
+                img.src = fallbackMap[type];
+            } else {
+                img.src = "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80";
+            }
+        }
+
+        // Mobile Menu Drawer Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Product Category Filter Engine
+        function filterCategory(category, button) {
+            const cards = document.querySelectorAll('.prod-card');
+            const buttons = document.querySelectorAll('.cat-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-rs-red', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+
+            button.classList.remove('bg-white', 'text-slate-700');
+            button.classList.add('bg-rs-red', 'text-white');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
