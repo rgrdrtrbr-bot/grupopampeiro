@@ -60,6 +60,12 @@
         .hero-gradient {
             background: radial-gradient(circle at 70% 30%, rgba(184, 12, 40, 0.88), rgba(26, 18, 14, 0.96)), url('pampeiro12.jpg') center/cover no-repeat;
         }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
         .bg-grid-pattern {
             background-image: radial-gradient(rgba(184, 12, 40, 0.07) 1.5px, transparent 1.5px);
             background-size: 28px 28px;
@@ -69,22 +75,6 @@
         }
         .card-taste-hover:hover {
             transform: translateY(-6px);
-        }
-        /* Carousel Slide Transitions */
-        .carousel-slide {
-            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-        }
-        .carousel-slide.active {
-            opacity: 1;
-            transform: scale(1);
-            pointer-events: auto;
-            z-index: 10;
-        }
-        .carousel-slide.inactive {
-            opacity: 0;
-            transform: scale(1.03);
-            pointer-events: none;
-            z-index: 1;
         }
     </style>
 </head>
@@ -220,7 +210,7 @@
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Hero Left Copy Content -->
-                <div class="lg:col-span-6 space-y-6">
+                <div class="lg:col-span-7 space-y-6">
                     
                     <div class="inline-flex items-center gap-2.5 bg-black/70 border border-rs-yellow/60 px-4 py-2 rounded-full backdrop-blur-md shadow-lg">
                         <span class="flex gap-1">
@@ -287,89 +277,59 @@
 
                 </div>
 
-                <!-- Hero Right: Dynamic Showcase Carousel Banner -->
-                <div class="lg:col-span-6 lg:-mt-2">
+                <!-- Hero Photo Stack Card Right featuring pampeiro15_2.jpeg prominently -->
+                <div class="lg:col-span-5">
                     <div class="relative">
                         <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-rs-red via-rs-yellow to-rs-redDark opacity-90 blur-lg"></div>
                         
-                        <div class="relative bg-pampeiro-dark border border-white/20 rounded-2xl overflow-hidden shadow-taste-lg p-2.5 sm:p-3" id="carousel-container">
+                        <div class="relative bg-pampeiro-dark border border-white/20 rounded-2xl overflow-hidden shadow-taste-lg p-4 space-y-4">
                             
-                            <!-- Main Carousel Frame -->
-                            <div class="relative rounded-xl overflow-hidden h-96 sm:h-[480px] lg:h-[540px] bg-stone-900 border border-rs-yellow/40 group">
-                                
-                                <!-- Slide 1: Fábrica Pampeiro -->
-                                <div class="carousel-slide active absolute inset-0">
-                                    <img src="pampeiro15_2.jpeg" onerror="handleImageError(this, 'fabricaSewing')" alt="Fábrica Pampeiro - Bombachas de Qualidade" class="w-full h-full object-cover object-center">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex items-end p-6">
-                                        <div>
-                                            <span class="bg-rs-red text-white font-black text-[11px] px-3 py-1 rounded uppercase tracking-wider">Confecção Própria</span>
-                                            <h3 class="text-xl sm:text-2xl font-bold text-rs-yellow font-serif mt-1.5">Fábrica de Bombachas Pampeiro</h3>
-                                            <p class="text-xs sm:text-sm text-slate-200 mt-1">Tradição Farroupilha com acabamento impecável para o Mercosul.</p>
-                                        </div>
+                            <!-- Featured Initial Image: pampeiro15_2.jpeg (Fábrica / Bombachas Própria) -->
+                            <div class="relative rounded-xl overflow-hidden h-64 group border border-rs-yellow/40 bg-stone-900">
+                                <img src="pampeiro15_2.jpeg" 
+                                     onerror="handleImageError(this, 'fabricaSewing')" 
+                                     alt="Fábrica de Bombachas Pampeiro - Tradição em Vestir" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex items-end p-4">
+                                    <div>
+                                        <span class="bg-rs-red text-white font-bold text-[10px] px-2.5 py-0.5 rounded uppercase">Direto da Fábrica Pampeiro</span>
+                                        <p class="text-xs text-rs-yellow font-bold mt-1">Bombachas Pampeiro: Escolha Certa com Tradição Farroupilha</p>
                                     </div>
                                 </div>
+                            </div>
 
-                                <!-- Slide 2: Bombachas & Pilchas -->
-                                <div class="carousel-slide inactive absolute inset-0">
-                                    <img src="pampeiro13_2.jpg" onerror="handleImageError(this, 'bombachaModel')" alt="Modelos de Bombachas e Pilchas" class="w-full h-full object-cover object-center">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex items-end p-6">
-                                        <div>
-                                            <span class="bg-rs-yellow text-slate-950 font-black text-[11px] px-3 py-1 rounded uppercase tracking-wider">Varejo de Pilchas</span>
-                                            <h3 class="text-xl sm:text-2xl font-bold text-rs-yellow font-serif mt-1.5">Vestuário Gaúcho Completo</h3>
-                                            <p class="text-xs sm:text-sm text-slate-200 mt-1">Bombachas masculinas, femininas e infantis em nossas lojas.</p>
-                                        </div>
-                                    </div>
+                            <!-- Thumbnails Showcase including pampeiro13_2.jpg, pampeiro7.jpeg, pampeiro4.jpeg -->
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="h-20 rounded-lg overflow-hidden border border-white/20 relative group bg-stone-900" title="Modelos de Bombachas Pampeiro">
+                                    <img src="pampeiro13_2.jpg" 
+                                         onerror="handleImageError(this, 'bombachaModel')" 
+                                         alt="Modelos de Bombachas Pampeiro" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition">
+                                    <span class="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] text-center text-rs-yellow font-bold py-0.5">Modelos & Pilchas</span>
                                 </div>
-
-                                <!-- Slide 3: Botas de Couro Legítimo -->
-                                <div class="carousel-slide inactive absolute inset-0">
-                                    <img src="pampeiro7.jpeg" onerror="handleImageError(this, 'botas')" alt="Botas em Couro Legítimo Pampeiro" class="w-full h-full object-cover object-center">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex items-end p-6">
-                                        <div>
-                                            <span class="bg-amber-800 text-white font-black text-[11px] px-3 py-1 rounded uppercase tracking-wider">Couro Legítimo</span>
-                                            <h3 class="text-xl sm:text-2xl font-bold text-rs-yellow font-serif mt-1.5">Lojas de Calçados & Botas</h3>
-                                            <p class="text-xs sm:text-sm text-slate-200 mt-1">Modelos campeiros de altíssima durabilidade e resistência.</p>
-                                        </div>
-                                    </div>
+                                <div class="h-20 rounded-lg overflow-hidden border border-white/20 relative group bg-stone-900" title="Botas em Couro Legítimo">
+                                    <img src="pampeiro7.jpeg" 
+                                         onerror="handleImageError(this, 'botas')" 
+                                         alt="Botas de Couro Pampeiro" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition">
+                                    <span class="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] text-center text-rs-yellow font-bold py-0.5">Calçados de Couro</span>
                                 </div>
-
-                                <!-- Slide 4: Esquina de Lojas no Centro de Santiago -->
-                                <div class="carousel-slide inactive absolute inset-0">
-                                    <img src="Pampeiro1.jpg" onerror="handleImageError(this, 'store1')" alt="Fachada Loja Bombachas Pampeiro" class="w-full h-full object-cover object-center">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex items-end p-6">
-                                        <div>
-                                            <span class="bg-rs-green text-white font-black text-[11px] px-3 py-1 rounded uppercase tracking-wider">8 Lojas em Santiago</span>
-                                            <h3 class="text-xl sm:text-2xl font-bold text-rs-yellow font-serif mt-1.5">Lojas no Centro de Santiago</h3>
-                                            <p class="text-xs sm:text-sm text-slate-200 mt-1">Av. Getúlio Vargas, 1662 e pontos estratégicos na cidade.</p>
-                                        </div>
-                                    </div>
+                                <div class="h-20 rounded-lg overflow-hidden border border-white/20 relative group bg-stone-900" title="Kits de Chimarrão">
+                                    <img src="pampeiro4.jpeg" 
+                                         onerror="handleImageError(this, 'mateiras')" 
+                                         alt="Artigos de Chimarrão Pampeiro" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition">
+                                    <span class="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] text-center text-rs-yellow font-bold py-0.5">Chimarrão & Lojas</span>
                                 </div>
+                            </div>
 
-                                <!-- Slide 5: Artefatos de Chimarrão & Variedades -->
-                                <div class="carousel-slide inactive absolute inset-0">
-                                    <img src="pampeiro4.jpeg" onerror="handleImageError(this, 'mateiras')" alt="Kits de Chimarrão Pampeiro" class="w-full h-full object-cover object-center">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex items-end p-6">
-                                        <div>
-                                            <span class="bg-rs-yellow text-slate-950 font-black text-[11px] px-3 py-1 rounded uppercase tracking-wider">Chimarrão & Utilidades</span>
-                                            <h3 class="text-xl sm:text-2xl font-bold text-rs-yellow font-serif mt-1.5">Mateiras, Cuias & Variedades</h3>
-                                            <p class="text-xs sm:text-sm text-slate-200 mt-1">Tudo o que você precisa para cevar teu chimarrão com orgulho.</p>
-                                        </div>
-                                    </div>
+                            <!-- Live Open Status Badge -->
+                            <div class="bg-rs-redDark/90 p-3 rounded-xl border border-rs-yellow/40 flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    <span class="text-xs font-bold text-white">Unidades Abertas em Santiago/RS</span>
                                 </div>
-
-                                <!-- Slide Controls Nav Buttons -->
-                                <button id="carousel-prev" aria-label="Imagem Anterior" class="absolute left-3.5 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-rs-red text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 border border-white/20 z-20">
-                                    <i class="fa-solid fa-chevron-left text-sm"></i>
-                                </button>
-                                <button id="carousel-next" aria-label="Próxima Imagem" class="absolute right-3.5 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-rs-red text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 border border-white/20 z-20">
-                                    <i class="fa-solid fa-chevron-right text-sm"></i>
-                                </button>
-
-                                <!-- Interactive Slide Indicators (Dots) -->
-                                <div class="absolute top-4 right-4 flex gap-1.5 z-20" id="carousel-dots">
-                                    <!-- Populated dynamically via JavaScript -->
-                                </div>
-
+                                <a href="tel:5532510067" class="text-xs text-rs-yellow font-bold hover:underline">(55) 3251-0067</a>
                             </div>
 
                         </div>
@@ -990,7 +950,7 @@
         </span>
     </a>
 
-    <!-- JavaScript Handling Fallbacks, Dynamic Carousel & Interactivity -->
+    <!-- JavaScript Handling Fallbacks & Interactivity -->
     <script>
         const fallbackMap = {
             logo: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><path fill='%230F5229' d='M20,60 Q80,20 160,40 Q180,100 120,170 Q40,160 20,60 Z'/><path fill='%23B80C28' d='M50,80 Q100,50 170,70 Q160,130 100,160 Q60,120 50,80 Z'/><path fill='%23F2B827' d='M80,110 Q120,80 150,110 Q140,160 90,170 Q70,140 80,110 Z'/><text x='100' y='105' font-family='serif' font-weight='bold' font-size='14' fill='%23ffffff' text-anchor='middle'>PAMPEIRO</text></svg>",
@@ -1023,85 +983,6 @@
                 mobileMenu.classList.toggle('hidden');
             });
         }
-
-        // Dynamic Hero Showcase Carousel Engine
-        document.addEventListener('DOMContentLoaded', () => {
-            const slides = document.querySelectorAll('.carousel-slide');
-            const dotsContainer = document.getElementById('carousel-dots');
-            const prevBtn = document.getElementById('carousel-prev');
-            const nextBtn = document.getElementById('carousel-next');
-            const carouselContainer = document.getElementById('carousel-container');
-            
-            if (!slides.length) return;
-
-            let currentIndex = 0;
-            let slideTimer;
-
-            // Generate Indicator Dots
-            slides.forEach((_, idx) => {
-                const dot = document.createElement('button');
-                dot.ariaLabel = `Ir para slide ${idx + 1}`;
-                dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === 0 ? 'bg-rs-yellow w-6' : 'bg-white/50 hover:bg-white'}`;
-                dot.addEventListener('click', () => goToSlide(idx));
-                dotsContainer.appendChild(dot);
-            });
-
-            const dots = dotsContainer.querySelectorAll('button');
-
-            function updateSlideClasses() {
-                slides.forEach((slide, idx) => {
-                    if (idx === currentIndex) {
-                        slide.classList.remove('inactive');
-                        slide.classList.add('active');
-                    } else {
-                        slide.classList.remove('active');
-                        slide.classList.add('inactive');
-                    }
-                });
-
-                dots.forEach((dot, idx) => {
-                    if (idx === currentIndex) {
-                        dot.className = 'w-6 h-2.5 rounded-full bg-rs-yellow transition-all duration-300';
-                    } else {
-                        dot.className = 'w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all duration-300';
-                    }
-                });
-            }
-
-            function goToSlide(index) {
-                currentIndex = (index + slides.length) % slides.length;
-                updateSlideClasses();
-                resetTimer();
-            }
-
-            function nextSlide() {
-                goToSlide(currentIndex + 1);
-            }
-
-            function prevSlide() {
-                goToSlide(currentIndex - 1);
-            }
-
-            function startTimer() {
-                slideTimer = setInterval(nextSlide, 4000); // 4 Seconds Auto Rotation
-            }
-
-            function resetTimer() {
-                clearInterval(slideTimer);
-                startTimer();
-            }
-
-            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-
-            // Pause on Hover for UX
-            if (carouselContainer) {
-                carouselContainer.addEventListener('mouseenter', () => clearInterval(slideTimer));
-                carouselContainer.addEventListener('mouseleave', startTimer);
-            }
-
-            startTimer();
-        });
 
         // Product Category Filter Engine
         function filterCategory(category, button) {
